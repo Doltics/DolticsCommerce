@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.doltics.commerce.constants.StatusTypes;
 import com.doltics.commerce.response.GenericMessage;
 import com.doltics.commerce.service.SiteService;
-import com.doltics.commerce.utils.StatusUtils;
 
 @RestController("site")
 public class SiteController {
@@ -37,9 +37,9 @@ public class SiteController {
 		try {
 			return response.get();
 		} catch (InterruptedException e) {
-			return new GenericMessage(StatusUtils.ERROR, "An error occured " + e.getMessage());
+			return new GenericMessage(StatusTypes.ERROR, "An error occured " + e.getMessage());
 		} catch (ExecutionException e) {
-			return new GenericMessage(StatusUtils.ERROR, "An error occured " + e.getMessage());
+			return new GenericMessage(StatusTypes.ERROR, "An error occured " + e.getMessage());
 		}
 	}
 }

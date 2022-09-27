@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 
+import com.doltics.commerce.constants.StatusTypes;
 import com.doltics.commerce.response.GenericMessage;
-import com.doltics.commerce.utils.StatusUtils;
 
 /**
  * Add a brief description of ErrorController
@@ -31,7 +31,7 @@ public class ErrorHandlerController implements ErrorController {
 	@RequestMapping(value = "/error")
 	public GenericMessage error(Exception ex, WebRequest request) {
 
-		return new GenericMessage(StatusUtils.ERROR, "An error occured completing your request");
+		return new GenericMessage(StatusTypes.ERROR, "An error occured completing your request");
 	}
 
 }

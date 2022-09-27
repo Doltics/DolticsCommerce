@@ -3,7 +3,7 @@ package com.doltics.commerce.abstracts;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.doltics.commerce.utils.StatusUtils;
+import com.doltics.commerce.constants.StatusTypes;
 
 /**
  * Abstract API response.
@@ -26,14 +26,14 @@ public abstract class AbstractResponse implements Serializable {
 		super();
 	}
 	
-	public AbstractResponse(StatusUtils status, String message) {
+	public AbstractResponse(StatusTypes status, String message) {
 		super();
 		this.status = status.getValue();
 		this.message = message;
 		this.date = new Date();
 	}
 
-	public AbstractResponse(StatusUtils status, String message, Date date) {
+	public AbstractResponse(StatusTypes status, String message, Date date) {
 		super();
 		this.status = status.getValue();
 		this.message = message;
@@ -50,7 +50,7 @@ public abstract class AbstractResponse implements Serializable {
 	/**
 	 * @param status the status to set
 	 */
-	public void setStatus(StatusUtils status) {
+	public void setStatus(StatusTypes status) {
 		this.status = status.getValue();
 	}
 

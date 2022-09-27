@@ -3,7 +3,7 @@ package com.doltics.commerce.response;
 import java.util.Date;
 
 import com.doltics.commerce.abstracts.AbstractResponse;
-import com.doltics.commerce.utils.StatusUtils;
+import com.doltics.commerce.constants.StatusTypes;
 
 public class GenericEntityMessage extends AbstractResponse{
 
@@ -15,15 +15,15 @@ public class GenericEntityMessage extends AbstractResponse{
 		super();
 	}
 
-	public GenericEntityMessage(StatusUtils status, String message, Date date) {
+	public GenericEntityMessage(StatusTypes status, String message, Date date) {
 		super(status, message, date);
 	}
 
-	public GenericEntityMessage(StatusUtils status, String message) {
+	public GenericEntityMessage(StatusTypes status, String message) {
 		super(status, message);
 	}
 	
-	public GenericEntityMessage(StatusUtils status, String message, String id) {
+	public GenericEntityMessage(StatusTypes status, String message, String id) {
 		super(status, message);
 		setId(id);
 	}

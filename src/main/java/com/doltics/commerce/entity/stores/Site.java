@@ -1,9 +1,12 @@
 package com.doltics.commerce.entity.stores;
 
+import com.doltics.commerce.constants.SiteStatus;
 import com.doltics.commerce.entity.AbstractEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -34,6 +37,10 @@ public class Site extends AbstractEntity{
 
 	@Column(name = "api_key", nullable = false, unique = true)
 	private String apiKey;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(name = "site_status")
+	private SiteStatus siteStatus;
 	
 	@Column(name = "consumer_key", nullable = true)
 	private String consumerKey;
@@ -81,6 +88,20 @@ public class Site extends AbstractEntity{
 	 */
 	public void setApiKey(String apiKey) {
 		this.apiKey = apiKey;
+	}
+
+	/**
+	 * @return the siteStatus
+	 */
+	public SiteStatus getSiteStatus() {
+		return siteStatus;
+	}
+
+	/**
+	 * @param siteStatus the siteStatus to set
+	 */
+	public void setSiteStatus(SiteStatus siteStatus) {
+		this.siteStatus = siteStatus;
 	}
 
 	/**

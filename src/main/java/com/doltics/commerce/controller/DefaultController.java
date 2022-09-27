@@ -6,8 +6,8 @@ package com.doltics.commerce.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.doltics.commerce.constants.StatusTypes;
 import com.doltics.commerce.response.GenericMessage;
-import com.doltics.commerce.utils.StatusUtils;
 
 /**
  * Add a brief description of DefaultController
@@ -30,6 +30,6 @@ public class DefaultController {
 	@RequestMapping(value = "/")
 	public GenericMessage indexPage() {
 
-		return new GenericMessage(StatusUtils.SUCCESS, "Welcome");
+		return new GenericMessage(StatusTypes.SUCCESS, "Welcome");
 	}
 }

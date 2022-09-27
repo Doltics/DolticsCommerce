@@ -1,4 +1,4 @@
-package com.doltics.commerce.utils;
+package com.doltics.commerce.constants;
 
 /**
  * Response status codes
@@ -6,13 +6,13 @@ package com.doltics.commerce.utils;
  * @author Paul
  *
  */
-public enum StatusUtils {
+public enum StatusTypes {
 
 	SUCCESS(200), NOTSET(203), FORBIDDEN(403), ERROR(500), NOTFOUND(404);
 
 	private final int value;
 
-	StatusUtils(final int newValue) {
+	StatusTypes(final int newValue) {
 		value = newValue;
 	}
 
