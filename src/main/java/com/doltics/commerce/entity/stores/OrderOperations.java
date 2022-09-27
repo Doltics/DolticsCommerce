@@ -18,10 +18,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(indexes = { 
-		@Index(name = "order_address_email", columnList = "email", unique = false),
-		@Index(name = "order_address_phone", columnList = "phone", unique = false),
-		@Index(name = "order_address_site", columnList = "order_id,site_id", unique = false),
-		@Index(name = "order_address_type_order", columnList = "address_type,order_id", unique = false)
+		@Index(name = "order_operation_cart_hash", columnList = "cart_hash", unique = false),
+		@Index(name = "order_operation_site", columnList = "order_id,site_id", unique = false),
+		@Index(name = "order_operation_hash_order", columnList = "cart_hash,order_id", unique = false)
 	}
 )
 public class OrderOperations extends AbstractEntity{

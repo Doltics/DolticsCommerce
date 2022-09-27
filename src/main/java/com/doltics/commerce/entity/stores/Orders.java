@@ -38,7 +38,7 @@ public class Orders extends AbstractEntity {
 	@JoinColumn(name = "site_id")
 	private Site site;
 
-	@Column(name = "orded_id", nullable = false)
+	@Column(name = "order_id", nullable = false)
 	private String orderId;
 
 	@Column(name = "status", nullable = false)

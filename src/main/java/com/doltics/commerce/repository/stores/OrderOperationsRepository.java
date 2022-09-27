@@ -8,5 +8,5 @@ import com.doltics.commerce.entity.stores.Site;
 
 public interface OrderOperationsRepository extends JpaRepository<OrderOperations, Long>{
 	
-	OrderOperations findByOrderAndsite(Orders order, Site site);
+	OrderOperations findByOrderAndSite(Orders order, Site site);
 }
