@@ -19,6 +19,7 @@ import jakarta.persistence.Table;
 			@Index(name = "order_status", columnList = "status", unique = false),
 			@Index(name = "order_customer_email", columnList = "customer_id,biling_email", unique = false),
 			@Index(name = "order_status_type", columnList = "status,order_type", unique = false),
+			@Index(name = "order_site", columnList = "order_id,site_id", unique = false),
 			@Index(name = "order_biling_email", columnList = "biling_email", unique = false)
 		}
 )
