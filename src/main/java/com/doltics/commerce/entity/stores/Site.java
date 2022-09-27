@@ -34,6 +34,12 @@ public class Site extends AbstractEntity{
 
 	@Column(name = "api_key", nullable = false, unique = true)
 	private String apiKey;
+	
+	@Column(name = "consumer_key", nullable = true)
+	private String consumerKey;
+	
+	@Column(name = "consumer_secret", nullable = true)
+	private String consumerSecret;
 
 	/**
 	 * @return the id
@@ -75,5 +81,33 @@ public class Site extends AbstractEntity{
 	 */
 	public void setApiKey(String apiKey) {
 		this.apiKey = apiKey;
+	}
+
+	/**
+	 * @return the consumerKey
+	 */
+	public String getConsumerKey() {
+		return consumerKey;
+	}
+
+	/**
+	 * @param consumerKey the consumerKey to set
+	 */
+	public void setConsumerKey(String consumerKey) {
+		this.consumerKey = consumerKey;
+	}
+
+	/**
+	 * @return the consumerSecret
+	 */
+	public String getConsumerSecret() {
+		return consumerSecret;
+	}
+
+	/**
+	 * @param consumerSecret the consumerSecret to set
+	 */
+	public void setConsumerSecret(String consumerSecret) {
+		this.consumerSecret = consumerSecret;
 	}
 }

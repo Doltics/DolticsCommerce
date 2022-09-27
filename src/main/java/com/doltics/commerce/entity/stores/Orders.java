@@ -1,5 +1,7 @@
 package com.doltics.commerce.entity.stores;
 
+import java.util.Date;
+
 import com.doltics.commerce.entity.AbstractEntity;
 
 import jakarta.persistence.Column;
@@ -81,6 +83,12 @@ public class Orders extends AbstractEntity {
 
 	@Column(name = "customer_note", nullable = true, columnDefinition = "text")
 	private String customerNote;
+	
+	@Column(name = "order_date_created", nullable = true)
+	private Date orderDateCreated;
+	
+	@Column(name = "order_date_updated", nullable = true)
+	private Date orderDateUpdated;
 
 	/**
 	 * @return the id
@@ -304,6 +312,34 @@ public class Orders extends AbstractEntity {
 	 */
 	public void setCustomerNote(String customerNote) {
 		this.customerNote = customerNote;
+	}
+
+	/**
+	 * @return the orderDateCreated
+	 */
+	public Date getOrderDateCreated() {
+		return orderDateCreated;
+	}
+
+	/**
+	 * @param orderDateCreated the orderDateCreated to set
+	 */
+	public void setOrderDateCreated(Date orderDateCreated) {
+		this.orderDateCreated = orderDateCreated;
+	}
+
+	/**
+	 * @return the orderDateUpdated
+	 */
+	public Date getOrderDateUpdated() {
+		return orderDateUpdated;
+	}
+
+	/**
+	 * @param orderDateUpdated the orderDateUpdated to set
+	 */
+	public void setOrderDateUpdated(Date orderDateUpdated) {
+		this.orderDateUpdated = orderDateUpdated;
 	}
 
 }
