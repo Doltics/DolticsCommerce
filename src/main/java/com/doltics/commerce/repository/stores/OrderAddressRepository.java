@@ -14,4 +14,6 @@ public interface OrderAddressRepository extends JpaRepository<OrderAddress, Long
 	List<OrderAddress> findBySite(Site site, Pageable pageable);
 	
 	OrderAddress findBySiteAndOrder(Site site, Orders order);
+	
+	OrderAddress findBySiteAndOrderAndAddressType(Site site, Orders order, String addressType);
 }

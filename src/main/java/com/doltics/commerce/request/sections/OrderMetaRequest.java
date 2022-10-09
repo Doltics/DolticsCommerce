@@ -1,4 +1,4 @@
-package com.doltics.commerce.request;
+package com.doltics.commerce.request.sections;
 
 public class OrderMetaRequest {
 	

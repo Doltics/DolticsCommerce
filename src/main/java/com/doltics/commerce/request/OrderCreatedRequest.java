@@ -1,8 +1,15 @@
 package com.doltics.commerce.request;
 
-import java.util.Date;
 import java.util.List;
 
+import com.doltics.commerce.request.sections.OrderCouponLinesRequest;
+import com.doltics.commerce.request.sections.OrderFeeLineRequest;
+import com.doltics.commerce.request.sections.OrderFormDetailsRequest;
+import com.doltics.commerce.request.sections.OrderLineItemRequest;
+import com.doltics.commerce.request.sections.OrderMetaRequest;
+import com.doltics.commerce.request.sections.OrderRefundRequest;
+import com.doltics.commerce.request.sections.OrderShippingLineRequest;
+import com.doltics.commerce.request.sections.OrderTaxRequest;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class OrderCreatedRequest {
@@ -22,14 +29,17 @@ public class OrderCreatedRequest {
 	@JsonProperty("created_via")
 	private String createdVia;
 	
+	@JsonProperty("status")
+	private String status;
+	
 	@JsonProperty("currency")
 	private String currency;
 	
 	@JsonProperty("date_created")
-	private Date dateCreated;
+	private String dateCreated;
 	
 	@JsonProperty("date_modified")
-	private Date dateModified;
+	private String dateModified;
 	
 	@JsonProperty("discount_total")
 	private String discountTotal;
@@ -83,10 +93,10 @@ public class OrderCreatedRequest {
 	private String transactionId;
 	
 	@JsonProperty("date_paid")
-	private Date datePaid;
+	private String datePaid;
 	
 	@JsonProperty("date_completed")
-	private Date dateCompleted;
+	private String dateCompleted;
 	
 	@JsonProperty("cart_hash")
 	private String cartHash;
@@ -186,6 +196,20 @@ public class OrderCreatedRequest {
 	}
 
 	/**
+	 * @return the status
+	 */
+	public String getStatus() {
+		return status;
+	}
+
+	/**
+	 * @param status the status to set
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	/**
 	 * @return the currency
 	 */
 	public String getCurrency() {
@@ -202,28 +226,28 @@ public class OrderCreatedRequest {
 	/**
 	 * @return the dateCreated
 	 */
-	public Date getDateCreated() {
+	public String getDateCreated() {
 		return dateCreated;
 	}
 
 	/**
 	 * @param dateCreated the dateCreated to set
 	 */
-	public void setDateCreated(Date dateCreated) {
+	public void setDateCreated(String dateCreated) {
 		this.dateCreated = dateCreated;
 	}
 
 	/**
 	 * @return the dateModified
 	 */
-	public Date getDateModified() {
+	public String getDateModified() {
 		return dateModified;
 	}
 
 	/**
 	 * @param dateModified the dateModified to set
 	 */
-	public void setDateModified(Date dateModified) {
+	public void setDateModified(String dateModified) {
 		this.dateModified = dateModified;
 	}
 
@@ -468,28 +492,28 @@ public class OrderCreatedRequest {
 	/**
 	 * @return the datePaid
 	 */
-	public Date getDatePaid() {
+	public String getDatePaid() {
 		return datePaid;
 	}
 
 	/**
 	 * @param datePaid the datePaid to set
 	 */
-	public void setDatePaid(Date datePaid) {
+	public void setDatePaid(String datePaid) {
 		this.datePaid = datePaid;
 	}
 
 	/**
 	 * @return the dateCompleted
 	 */
-	public Date getDateCompleted() {
+	public String getDateCompleted() {
 		return dateCompleted;
 	}
 
 	/**
 	 * @param dateCompleted the dateCompleted to set
 	 */
-	public void setDateCompleted(Date dateCompleted) {
+	public void setDateCompleted(String dateCompleted) {
 		this.dateCompleted = dateCompleted;
 	}
 

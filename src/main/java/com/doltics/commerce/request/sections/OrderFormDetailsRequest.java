@@ -1,4 +1,4 @@
-package com.doltics.commerce.request;
+package com.doltics.commerce.request.sections;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

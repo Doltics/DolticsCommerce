@@ -1,19 +1,22 @@
-package com.doltics.commerce.request;
+package com.doltics.commerce.request.sections;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class OrderShippingLineRequest {
+public class OrderFeeLineRequest {
 	
 	@JsonProperty("id")
 	private String id;
 	
-	@JsonProperty("method_title")
-	private String methodTitle;
+	@JsonProperty("name")
+	private String name;
 	
-	@JsonProperty("method_id")
-	private String methodId;
+	@JsonProperty("tax_class")
+	private String taxClass;
+	
+	@JsonProperty("tax_status")
+	private String taxStatus;
 	
 	@JsonProperty("total")
 	private String total;
@@ -42,31 +45,45 @@ public class OrderShippingLineRequest {
 	}
 
 	/**
-	 * @return the methodTitle
+	 * @return the name
 	 */
-	public String getMethodTitle() {
-		return methodTitle;
+	public String getName() {
+		return name;
 	}
 
 	/**
-	 * @param methodTitle the methodTitle to set
+	 * @param name the name to set
 	 */
-	public void setMethodTitle(String methodTitle) {
-		this.methodTitle = methodTitle;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	/**
-	 * @return the methodId
+	 * @return the taxClass
 	 */
-	public String getMethodId() {
-		return methodId;
+	public String getTaxClass() {
+		return taxClass;
 	}
 
 	/**
-	 * @param methodId the methodId to set
+	 * @param taxClass the taxClass to set
 	 */
-	public void setMethodId(String methodId) {
-		this.methodId = methodId;
+	public void setTaxClass(String taxClass) {
+		this.taxClass = taxClass;
+	}
+
+	/**
+	 * @return the taxStatus
+	 */
+	public String getTaxStatus() {
+		return taxStatus;
+	}
+
+	/**
+	 * @param taxStatus the taxStatus to set
+	 */
+	public void setTaxStatus(String taxStatus) {
+		this.taxStatus = taxStatus;
 	}
 
 	/**
