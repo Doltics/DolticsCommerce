@@ -3,6 +3,7 @@ package com.doltics.commerce.service;
 import java.util.concurrent.CompletableFuture;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import com.doltics.commerce.constants.StatusTypes;
@@ -68,6 +69,7 @@ public class OrderService {
 	 * @param orderCreatedRequest
 	 * @return
 	 */
+	@Async("asyncExecutor")
 	public CompletableFuture<GenericEntityMessage> processOrder(OrderCreatedRequest orderCreatedRequest, Site site) {
 		Orders orders = saveOrder(orderCreatedRequest, site);
 		saveAddress(orderCreatedRequest, site, orders);
